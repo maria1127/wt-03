@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+alert("ENTER DETAILS");
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let y = document.forms["myForm"]["gen"].value;
+  if (y == "") {
+    alert("Gender must be filled out");
+    return false;
+  }
+}
+function Con_click()
+{
+    confirm("Confirm details.");
+}
+</script>
+<style>
+    h2{
+        padding:25px;
+        margin: 15px;
+        background-color: rgb(151, 151, 203);
+        text-decoration-line: underline;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(239, 226, 208);
+    text-align: center;
+  }
+  .sub:hover
+  {
+    background-color: rgb(78, 138, 4);
+  }
+</style>
+</head>
+<body>
+<hr>
+<h2>PROFILE</h2>
+<hr>
+<form name="myForm"  onsubmit="return validateForm()" method="post">
+ <input type="text" placeholder="Enter name" name="fname">
+ <p>Gender</p>
+ <label for="male">Male</label>
+ <input type="radio" id="male" name="gen" value="male"><br>
+ <label for="fmale">Female</label>
+ <input type="radio" id="fmale" name="gen" value="Female"><br>
+ <p>Qualification</p>
+ 
+ <input type="checkbox" id="10" name="qual" value="10">
+ <label for="10">10th pass</label><br>
+
+ 
+ <input type="checkbox" id="12" name="qual" value="12">
+ <label for="12">12th pass</label><br>
+
+ 
+ <input type="checkbox" id="de" name="qual" value="diploma">
+ <label for="de">Diploma</label><br>
+
+ 
+ <input type="checkbox" id="deg" name="qual" value="degree">
+ <label for="deg">Degree</label><br>
+ <input class="sub" type="submit" value="Submit" onclick="Con_click()">
+
+</form>
+
+</body>
+</html>
